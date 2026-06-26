@@ -1,67 +1,31 @@
 # 🎓 School Management System (MVC - Pure PHP)
 
-A School Management System built using Pure PHP and the MVC (Model-View-Controller) architecture. The system helps manage students, teachers, classes, subjects, attendance, grades, and administrative operations.
+A School Management System built using Pure PHP and the MVC (Model-View-Controller) architecture. The application runs in Docker containers and provides modules for managing students, teachers, classes, subjects, attendance, grades, and more.
 
 ---
 
 ## 🧰 Technologies Used
 
-- ✅ PHP (Pure PHP)
-- ✅ MySQL
-- ✅ HTML5
-- ✅ CSS3
-- ✅ JavaScript
-- ✅ Bootstrap 5
-- ✅ MVC Architecture
-- ✅ XAMPP
+- PHP (Pure PHP)
+- MySQL
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- Docker
+- Docker Compose
+- MVC Architecture
 
 ---
 
-## 📁 Folder Structure
+## 📦 Requirements
 
-```
-app/
-public/
-vendor/
-database/
-README.md
-```
-
-- **app/** - Models, Views, Controllers
-- **public/** - Public files (index.php, CSS, JavaScript, images)
-- **vendor/** - Composer packages (if used)
-- **database/** - SQL database file
+- Docker
+- Docker Compose
 
 ---
 
-## ✨ Features
-
-- 👨‍🎓 Student Management
-- 👨‍🏫 Teacher Management
-- 🏫 Class Management
-- 📚 Subject Management
-- 📝 Attendance Management
-- 📊 Grade Management
-- 👤 User Authentication
-- 🔒 Role-Based Authorization (Admin / Teacher / Student)
-- 📅 Timetable Management
-- 📈 Dashboard
-
----
-
-## 💾 Database
-
-Import the SQL file from the **database** folder into MySQL.
-
-Example:
-
-```
-database/school_management_system.sql
-```
-
----
-
-## 🚀 Installation
+## 🚀 Getting Started
 
 ### 1. Clone the repository
 
@@ -75,54 +39,79 @@ or
 git clone https://github.com/Kyaw-Moe-Oo/SchoolManagementSystem.git
 ```
 
-### 2. Move the project
+### 2. Go to the project directory
 
-Copy the project into your XAMPP directory:
-
-```text
-C:\xampp\htdocs\SchoolManagementSystem
+```bash
+cd SchoolManagementSystem
 ```
 
-### 3. Import the database
+### 3. Start Docker containers
 
-Import the SQL file into MySQL using phpMyAdmin.
-
-### 4. Configure the database
-
-Update your database configuration file.
-
-Example:
-
-```php
-DB_HOST=localhost
-DB_NAME=school_management_system
-DB_USER=root
-DB_PASS=
+```bash
+docker compose up -d --build
 ```
 
-### 5. Start XAMPP
+### 4. Import the database
 
-Start:
-
-- Apache
-- MySQL
-
-### 6. Open the application
+Import the SQL file located in the project (for example):
 
 ```
-http://localhost/SchoolManagementSystem/public
+database/school_management_system.sql
 ```
+
+into the MySQL container.
+
+### 5. Open the application
+
+```
+http://localhost
+```
+
+or
+
+```
+http://localhost:8080
+```
+
+(depending on your Docker configuration)
+
+### 6. Stop the containers
+
+```bash
+docker compose down
+```
+
+---
+
+## 📂 Project Structure
+
+```
+app/
+public/
+database/
+docker/
+docker-compose.yml
+README.md
+```
+
+---
+
+## ✨ Features
+
+- Student Management
+- Teacher Management
+- Class Management
+- Subject Management
+- Attendance Management
+- Grade Management
+- Authentication
+- Role-Based Authorization
+- Dashboard
 
 ---
 
 ## 👨‍💻 Author
 
-**Kyaw Moe Oo**
+Kyaw Moe Oo
 
 GitHub: https://github.com/Kyaw-Moe-Oo
-
----
-
-## 📄 License
-
-This project is for educational purposes.
